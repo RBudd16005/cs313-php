@@ -30,4 +30,20 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
   echo '-</strong> &quot' . $row['content'] . '&quot';
   echo '<br/>';
 }
+
+echo '<form action=\"submit\" method=\"POST\">';
+echo 'Book: <input type=\"text\" name=\"book\">';
+echo '<input type=\"submit\" value=\"Search\">';
+echo '</form>'
+
+$book = $_POST['book'];
+
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $book') as $row)
+{
+  echo '<strong>' . $row['book'];
+  echo ' ' . $row['chapter'];
+  echo ':' . $row['verse'];
+  echo '-</strong> &quot' . $row['content'] . '&quot';
+  echo '<br/>';
+}
 ?>
