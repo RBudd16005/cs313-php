@@ -1,5 +1,5 @@
 <?php
-echo "<h1><strong>Scripture Resources</strong></h1>"
+echo '<h1><strong>Scripture Resources</strong></h1>';
 try
 {
   $dbUrl = getenv('DATABASE_URL');
