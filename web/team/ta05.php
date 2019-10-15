@@ -31,14 +31,14 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
   echo '<br/>';
 }
 
-echo '<form action=ta05.php method=GET>';
+echo '<form action=ta05.php method=POST>';
 echo 'Book: <input type=text name=book>';
 echo '<input type=submit value=Search>';
 echo '</form>';
 
-$book = $_GET['book'];
+$book = $_POST['book'];
 
-foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $book') as $row)
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book =' . $book) as $row)
 {
   echo '<strong>' . $row['book'];
   echo ' ' . $row['chapter'];
