@@ -38,7 +38,7 @@ echo '</form>';
 
 $book = $_POST['book'];
 
-foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book =' . $book) as $row)
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = John') as $row)
 {
   echo '<strong>' . $row['book'];
   echo ' ' . $row['chapter'];
