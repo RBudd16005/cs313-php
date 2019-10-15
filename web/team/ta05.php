@@ -34,7 +34,7 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
 echo '<form action=\"ta05.php\" method=\"POST\">';
 echo 'Book: <input type=\"text\" name=\"book\">';
 echo '<input type=\"submit\" value=\"Search\">';
-echo '</form>'
+echo '</form>';
 
 /*$book = $_POST['book'];
 
