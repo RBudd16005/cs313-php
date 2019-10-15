@@ -22,12 +22,12 @@ catch (PDOException $ex)
   die();
 }
 
-foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+/*foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 {
   echo '<strong>' . $row['book'];
   echo ' ' . $row['chapter'];
   echo ':' . $row['verse'];
   echo '-</strong> &quot' . $row['content'] . '&quot';
   echo '<br/>';
-}
+}*/
 ?>
