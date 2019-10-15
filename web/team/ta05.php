@@ -32,11 +32,11 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
 }
 
 echo '<form action=\"ta05.php\" method=\"POST\">';
-echo 'Book: <input type=\"text\" name=\"book\">';
+echo 'Book: <input type=text name=book>';
 echo '<input type=submit value=Search>';
 echo '</form>';
 
-/*$book = $_POST['book'];
+$book = $_POST['book'];
 
 foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $book') as $row)
 {
@@ -45,5 +45,5 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE 
   echo ':' . $row['verse'];
   echo '-</strong> &quot' . $row['content'] . '&quot';
   echo '<br/>';
-}*/
+}
 ?>
