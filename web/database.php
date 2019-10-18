@@ -31,7 +31,7 @@ $sound = $_POST['sound'];
 
 foreach ($db->query('SELECT name, author, created FROM sounds WHERE name =' . '\''. $sound . '\'') as $row)
 {
-  echo '<strong>' . $row['name'] . '<\strong> <br>';
+  echo '<strong>' . $row['name'] . '<br>';
   echo 'By ' . $row['author'] . '<br>';
   echo 'Uploaded on: ' . $row['created'] . '<br>';
 }
