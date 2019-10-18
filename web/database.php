@@ -29,12 +29,10 @@ echo '</form>';
 
 $sound = $_POST['sound'];
 
-echo $sound;
-
 foreach ($db->query('SELECT name, author, created FROM sounds WHERE name =' . '\''. $sound . '\'') as $row)
 {
-  echo '<strong>' . $row['name'] . '<\strong><br>';
+  echo '<strong>' . $row['name'] . '-<\strong><br>';
   echo 'By ' . $row['author'] . '<br>';
-  echo $row['created'] . '<br>';
+  echo 'Uploaded on: ' . $row['created'] . '<br>';
 }
 ?>
