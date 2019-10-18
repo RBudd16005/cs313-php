@@ -27,11 +27,11 @@ echo 'Sound: <input type=text name=sound>';
 echo '<input type=submit value=Search>';
 echo '</form>';
 
-$sound = $_POST['name'];
+$name = $_POST['name'];
 
-echo $sound;
+echo $name;
 
-foreach ($db->query('SELECT name, author, created FROM sounds WHERE name =' . '\''. $sound . '\'') as $row)
+foreach ($db->query('SELECT name, author, created FROM sounds WHERE name =' . '\''. $name . '\'') as $row)
 {
   echo '<strong>' . $row['name'] . '<\strong><br>';
   echo 'By ' . $row['author'] . '<br>';
