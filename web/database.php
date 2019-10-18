@@ -22,14 +22,6 @@ catch (PDOException $ex)
   die();
 }
 
-foreach ($db->query('SELECT name, author, created FROM sounds') as $row)
-{
-  echo '<strong>' . $row['name'];
-  echo ' ' . $row['author'];
-  echo ':' . $row['created'];
-  echo '<br/>';
-}
-
 echo '<form action=database.php method=POST>';
 echo 'Sound: <input type=text name=sound>';
 echo '<input type=submit value=Search>';
@@ -37,11 +29,12 @@ echo '</form>';
 
 $sound = $_POST['name'];
 
+echo $sound;
+
 foreach ($db->query('SELECT name, author, created FROM sounds WHERE name =' . '\''. $sound . '\'') as $row)
 {
-  echo '<strong>' . $row['name'];
-  echo ' ' . $row['author'];
-  echo ':' . $row['created'];
-  echo '<br/>';
+  echo '<strong>' . $row['name'] . '<\strong><br>';
+  echo 'By ' . $row['author'] . '<br>';
+  echo $row['created'] . '<br>';
 }
 ?>
