@@ -11,7 +11,7 @@
         </h1>
         
         <p>
-        <a style="float:right" href="login.php">Sign In</a>  
+        <a style="float:right" href="login.php">Sign In</a>  |  
         <a style="float:right" href="signup.php">Sign Up</a><br>
         </p>
     </div>
