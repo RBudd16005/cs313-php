@@ -23,7 +23,7 @@
         </form>
         <a href="signup.php">Sign Up</a><br>
         <form action="logout.php" method="post"><br>
-            <button type="submit" name="logout-submit">Sign Out</button><br>
+            <button type="submit" name="logout-submit">Sign Out</button>
         </form>
     </div>
 

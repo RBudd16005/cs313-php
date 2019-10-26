@@ -17,12 +17,12 @@
 
     <div style="float:center">
         <h1>Sign Up</h1>
-        <form action="library.php" method="post">
+        <form action="signup.db.php" method="post">
             <input type="text" name="uid" placeholder="Username"><br>
             <input type="text" name="email" placeholder="Email"><br>
             <input type="password" name="pwd" placeholder="Password"><br>
             <input type="password" name="pwd-repeat" placeholder="Confirm Password"><br>
-            <input type="button" name="signup-submit">Submit</button><br>
+            <input type="button" name="signup-submit">Submit</button>
         </form>
     </div>
 

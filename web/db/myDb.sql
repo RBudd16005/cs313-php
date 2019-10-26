@@ -2,18 +2,18 @@
 
 CREATE TABLE user_profile
 (
-    id int,
-    username varchar(30),
-    dob date,
-    created date,
+    id serial NOT NULL,
+    username varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    password varchar(255) NOT NULL,
     PRIMARY KEY(id)
 );
 
-CREATE TABLE songs
+CREATE TABLE sounds
 (
-    id int,
-    name varchar(30),
+    id serial NOT NULL,
+    name varchar(30) NOT NULL,
     author varchar(30),
-    year int,
+    created date,
     PRIMARY KEY(id)
 );
