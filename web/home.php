@@ -9,9 +9,11 @@
         <h1>
             Sound Biscuit
         </h1>
-
-        <a style="float:right" href="login.php">Sign In</a>
+        
+        <p>
+        <a style="float:right" href="login.php">Sign In</a>  
         <a style="float:right" href="signup.php">Sign Up</a><br>
+        </p>
     </div>
 
     <hr>
