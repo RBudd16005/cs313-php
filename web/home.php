@@ -44,7 +44,6 @@
     </div>
 
     <?php
-    if (isset($_POST['insert-submit'])) {
         try
         {
             $dbUrl = getenv('DATABASE_URL');
@@ -73,7 +72,6 @@
             echo 'By ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
-    }
     ?>
 </body>
 </html>
