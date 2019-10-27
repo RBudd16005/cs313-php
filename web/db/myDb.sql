@@ -12,7 +12,7 @@ CREATE TABLE user_profile
 CREATE TABLE sounds
 (
     id serial NOT NULL,
-    name varchar(30) NOT NULL,
+    sname varchar(30) NOT NULL,
     author varchar(30),
     created date,
     PRIMARY KEY(id)

@@ -21,7 +21,7 @@ if (isset($_POST['insert-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO sounds (name, author, created) VALUES ($name, $author, $date)";
+        $sql = "INSERT INTO sounds (sname, author, created) VALUES ($name, $author, $date)";
         $db->query($sql);
     }
     catch (PDOException $ex)

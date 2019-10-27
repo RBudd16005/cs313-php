@@ -67,11 +67,11 @@
             die();
         }
 
-        foreach ($db->query('SELECT name, author, created FROM sounds') as $row)
+        foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
         {
-            echo $row['name'] . '<br>';
+            echo $row['sname'] . '<br>';
             echo 'By ' . $row['author'] . '<br>';
-            echo $row['date'] . '<br><br>';
+            echo $row['created'] . '<br><br>';
         }
     }
     ?>

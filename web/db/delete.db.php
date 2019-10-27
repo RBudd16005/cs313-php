@@ -19,7 +19,7 @@ if (isset($_POST['delete-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "DELETE FROM sounds WHERE name=$name";
+        $sql = "DELETE FROM sounds WHERE sname=$name";
         $db->query($sql);
     }
     catch (PDOException $ex)
