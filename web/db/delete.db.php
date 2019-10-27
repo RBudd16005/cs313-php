@@ -39,5 +39,5 @@ if (isset($_POST['delete-submit'])) {
             echo $row['created'] . '<br><br>';
         }
 
-    echo "<a style=\"float:left\" href=\"~/home.php\">Home</a><br>";
+    echo "<a style=\"float:left\" href=\"../web/home.php\">Home</a><br>";
 }
