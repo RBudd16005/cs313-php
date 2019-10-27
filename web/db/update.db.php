@@ -3,7 +3,7 @@ if (isset($_POST['edit-submit'])) {
 
     $name = $_POST['name'];
     $author = $_POST['author'];
-    $date = $_POST['created'];
+    $date = $_POST['date'];
 
     try
     {
