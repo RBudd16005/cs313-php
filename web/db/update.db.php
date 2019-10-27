@@ -21,10 +21,10 @@ if (isset($_POST['edit-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "UPDATE sounds WHERE sname=$name SET author=$author";
+        $sql = "UPDATE sounds WHERE sname='$name' SET author='$author'";
         $db->query($sql);
 
-        $sql = "UPDATE sounds WHERE sname=$name SET created=$date";
+        $sql = "UPDATE sounds WHERE sname='$name' SET created='$date'";
         $db->query($sql);
     }
     catch (PDOException $ex)

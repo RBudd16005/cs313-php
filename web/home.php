@@ -36,13 +36,15 @@
     <div>
         <h1>Edit Sound In Library:</h1><br>
         <form action="db/update.db.php" method="post">
-            <input type="text" name="name" placeholder="Username"><br>
+            <input type="text" name="name" placeholder="Sound name"><br>
             <input type="password" name="author" placeholder="Author"><br>
             <input type="date" name="date" placeholder="Date edited"><br>
             <button type="submit" name="edit-submit">Edit</button><br>
         </form>
     </div>
 
+    <div>
+    <h1>Your Library</h1><br>
     <?php
         try
         {
@@ -69,9 +71,10 @@
         foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
         {
             echo $row['sname'] . '<br>';
-            echo 'By ' . $row['author'] . '<br>';
+            echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
     ?>
+    </div>
 </body>
 </html>
