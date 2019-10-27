@@ -29,4 +29,13 @@ if (isset($_POST['delete-submit'])) {
     }
 
     echo "Sound deleted successfully!";
+
+    echo "<h1>Your Library</h1>";
+
+    foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
+        {
+            echo $row['sname'] . '<br>';
+            echo 'by ' . $row['author'] . '<br>';
+            echo $row['created'] . '<br><br>';
+        }
 }

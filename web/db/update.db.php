@@ -33,5 +33,14 @@ if (isset($_POST['edit-submit'])) {
         die();
     }
 
-    echo "Sound edited successfully!";
+    echo "Sound edited successfully!<br>";
+
+    echo "<h1>Your Library</h1>";
+
+    foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
+        {
+            echo $row['sname'] . '<br>';
+            echo 'by ' . $row['author'] . '<br>';
+            echo $row['created'] . '<br><br>';
+        }
 }
