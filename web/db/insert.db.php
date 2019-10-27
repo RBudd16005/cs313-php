@@ -3,7 +3,7 @@ if (isset($_POST['insert-submit'])) {
 
     $name = $_POST['name'];
     $author = $_POST['author'];
-    $date = $_POST['date'];
+    $date = $_POST['created'];
 
     try
     {
