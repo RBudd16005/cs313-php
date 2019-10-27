@@ -38,4 +38,6 @@ if (isset($_POST['delete-submit'])) {
             echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
+
+    echo "<a style=\"float:left\" href=\"home.php\">Home</a><br>";
 }

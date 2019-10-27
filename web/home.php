@@ -10,6 +10,7 @@
             Sound Biscuit
         </h1>
 
+        <a style="float:left" href="home.php">Home</a><br>
         <a style="float:right" href="login.php">Sign In</a><br>
     </div>
 
