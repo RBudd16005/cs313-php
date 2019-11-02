@@ -58,27 +58,21 @@ catch (PDOException $ex)
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-try
+if ($username == "username")
 {
-     $stmt = $db->prepare("SELECT password FROM users WHERE username = :name");
-                $stmt->bindValue(':name', $username, PDO::PARAM_STR);
-                $stmt->execute();
-                $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-  if (password_verify($hashed_password, $stored_password))
-    {
-      header('Location: ../library.php');
-      die();
-    }
+  if($password == "password")
+  {
+    header("Location: ../library.php");
+    exit();
+  }
   else
-    {
-      echo 'Incorrect password! Please, try again.'
-      die();
-    }
+  {
+    echo "Incorrect username or password, please try again.";
+  }
 }
-catch (PDOException $ex) {
-    echo 'Error!: ' . $ex->getMessage();
-    die();
+else
+{
+  echo "Incorrect username or password, please try again.";
 }
 ?>
 <div class="footer_2"></div>
