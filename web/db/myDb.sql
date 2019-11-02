@@ -1,6 +1,6 @@
 //heroku pg:psql --app afternoon-earth-34301
 
-CREATE TABLE user_profile
+CREATE TABLE users
 (
     id serial NOT NULL,
     username varchar(255) NOT NULL,
@@ -12,7 +12,8 @@ CREATE TABLE user_profile
 CREATE TABLE sounds
 (
     id serial NOT NULL,
-    sname varchar(30) NOT NULL,
+    username varchar(30) NOT NULL,
+    name varchar(30) NOT NULL,
     author varchar(30),
     created date,
     PRIMARY KEY(id)

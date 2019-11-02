@@ -21,10 +21,10 @@ if (isset($_POST['edit-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "UPDATE sounds SET author='$author' WHERE sname='$name'";
+        $sql = "UPDATE sounds SET author='$author' WHERE name='$name'";
         $db->query($sql);
 
-        $sql = "UPDATE sounds SET created='$date' WHERE sname='$name'";
+        $sql = "UPDATE sounds SET created='$date' WHERE name='$name'";
         $db->query($sql);
     }
     catch (PDOException $ex)
@@ -37,12 +37,13 @@ if (isset($_POST['edit-submit'])) {
 
     echo "<h1>Your Library</h1>";
 
-    foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
+    foreach ($db->query('SELECT name, author, created FROM sounds WHERE username='$username'') as $row)
         {
-            echo $row['sname'] . '<br>';
+            echo $row['name'] . '<br>';
             echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
 
     echo "<a style=\"float:left\" href=\"../home.php\">Home</a><br>";
 }
+?>

@@ -19,7 +19,7 @@ if (isset($_POST['delete-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "DELETE FROM sounds WHERE sname='$name'";
+        $sql = "DELETE FROM sounds WHERE name='$name'";
         $db->query($sql);
     }
     catch (PDOException $ex)
@@ -32,12 +32,13 @@ if (isset($_POST['delete-submit'])) {
 
     echo "<h1>Your Library</h1>";
 
-    foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
+    foreach ($db->query('SELECT name, author, created FROM sounds WHERE username='$username'') as $row)
         {
-            echo $row['sname'] . '<br>';
+            echo $row['name'] . '<br>';
             echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
 
     echo "<a style=\"float:left\" href=\"../home.php\">Home</a><br>";
 }
+?>

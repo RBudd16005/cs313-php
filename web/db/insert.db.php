@@ -21,7 +21,7 @@ if (isset($_POST['insert-submit'])) {
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO sounds (sname, author, created) VALUES ('$name', '$author', '$date')";
+        $sql = "INSERT INTO sounds (username, name, author, created) VALUES ('$username', '$name', '$author', '$date')";
         $db->query($sql);
     }
     catch (PDOException $ex)
@@ -34,12 +34,13 @@ if (isset($_POST['insert-submit'])) {
 
     echo "<h1>Your Library</h1>";
 
-    foreach ($db->query('SELECT sname, author, created FROM sounds') as $row)
+    foreach ($db->query('SELECT name, author, created FROM sounds WHERE username='$username'') as $row)
         {
-            echo $row['sname'] . '<br>';
+            echo $row['name'] . '<br>';
             echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
         }
 
     echo "<a style=\"float:left\" href=\"../home.php\">Home</a><br>";
 }
+?>
