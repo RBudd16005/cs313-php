@@ -33,7 +33,7 @@
         <img id="image_1" src="images/sounds.jpg">
     </div>
 <?php
-if (isset($_POST['signup-submit'])) {
+/*if (isset($_POST['signup-submit'])) {
     $username = $_POST['uid'];
     $email = $_POST['email'];
     $password = $_POST['pwd'];
@@ -88,7 +88,7 @@ if (isset($_POST['signup-submit'])) {
         }
     }
 }
-?>
+?>*/
 
     <h1 id="success">Account created successfully!</h1>
     <div class="footer_2"></div>
