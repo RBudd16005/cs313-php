@@ -87,8 +87,8 @@
             die();
         }
     }
-}
-?>*/
+}*/
+?>
 
     <h1 id="success">Account created successfully!</h1>
     <div class="footer_2"></div>
