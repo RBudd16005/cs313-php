@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST['edit-submit'])) {
 
+    $username = "username";
     $name = $_POST['name'];
     $author = $_POST['author'];
     $date = $_POST['date'];
