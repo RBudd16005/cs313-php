@@ -66,7 +66,7 @@
     <?php
 
         $username = "username";
-        
+
         try
         {
             $dbUrl = getenv('DATABASE_URL');
@@ -89,12 +89,12 @@
             die();
         }
 
-        foreach ($db->query('SELECT name, author, created FROM sounds WHERE = '$username'') as $row)
+        /*foreach ($db->query('SELECT name, author, created FROM sounds WHERE = '$username'') as $row)
         {
             echo $row['name'] . '<br>';
             echo 'by ' . $row['author'] . '<br>';
             echo $row['created'] . '<br><br>';
-        }
+        }*/
     ?>
     </div>
 
