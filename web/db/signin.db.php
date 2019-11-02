@@ -47,11 +47,15 @@ if ($username == "username")
   else
   {
     echo "Incorrect username or password, please try again.";
+    header("Location: ../signin.html");
+    exit();
   }
 }
 else
 {
   echo "Incorrect username or password, please try again.";
+  header("Location: ../signin.html");
+  exit();
 }
 ?>
 <div class="footer_2"></div>
