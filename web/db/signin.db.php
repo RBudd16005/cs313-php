@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sound Biscuit</title>
-    <link rel="stylesheet" type="text/css" href="css/soundbiscuit.css">
+    <link rel="stylesheet" type="text/css" href="../css/soundbiscuit.css">
 </head>
 <body>
 <div class="header">
