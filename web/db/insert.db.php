@@ -33,14 +33,7 @@ if (isset($_POST['insert-submit'])) {
 
     echo "Sound uploaded successfully!";
 
-    echo "<h1>Your Library</h1>";
-
-    foreach ($db->query('SELECT name, author, created FROM sounds WHERE username='$username'') as $row)
-        {
-            echo $row['name'] . '<br>';
-            echo 'by ' . $row['author'] . '<br>';
-            echo $row['created'] . '<br><br>';
-        }
-
-    echo "<a style=\"float:left\" href=\"../home.php\">Home</a><br>";
+    header("Location: ../library.php");
+    exit();
 }
+?>
