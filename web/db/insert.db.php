@@ -44,4 +44,3 @@ if (isset($_POST['insert-submit'])) {
 
     echo "<a style=\"float:left\" href=\"../home.php\">Home</a><br>";
 }
-?>
